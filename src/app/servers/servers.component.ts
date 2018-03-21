@@ -40,6 +40,6 @@ export class ServersComponent implements OnInit {
   }
 
   getBackgroundColor(click) {
-    return click >= 5 ? 'blue' : 'white';
+    return click >= 4 ? 'blue' : 'white';
   }
 }

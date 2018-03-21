@@ -30,10 +30,16 @@
 </button>
 <p [ngStyle]="{display:isDisplayed}">Secret pass= tuna</p>
 <h6>Click List</h6>
-<p
+<!-- <p
     *ngFor="let click of clicks"
     [ngStyle]="{backgroundColor: getBackgroundColor(click)}"
     [ngClass]="{whiteColor: click>=5}">
+    Status is {{click}}
+</p> -->
+<p
+    *ngFor="let click of clicks; let i = index"
+    [ngStyle]="{backgroundColor: i>=4 ? 'blue': 'white'}"
+    [ngClass]="{whiteColor: i>=4}">
     Status is {{click}}
 </p>
 
