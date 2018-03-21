@@ -9,7 +9,19 @@ export class ServerComponent {
     status = "offline";
     operatingSystem = "Windows";
 
+    constructor() {
+        this.status = Math.random() > 0.5 ? 'online' : 'offline';
+    }
+
     getServerOS() {
         return this.operatingSystem;
+    }
+
+    getBackgroundColor() {
+        return this.status == 'online' ? 'green' : 'red';
+    }
+
+    getForeColor(){
+        return this.status == 'online' ? 'white' : 'black';
     }
 }

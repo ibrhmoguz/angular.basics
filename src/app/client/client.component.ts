@@ -14,7 +14,7 @@ export class ClientComponent {
 
     onInputChange(event) {
         var inputValue = (<HTMLInputElement>event.target).value;
-        console.log(inputValue);
+        //console.log(inputValue);
         if (inputValue == '')
             this.isButtonDisabled = true;
         else
