@@ -1,8 +1,8 @@
 <label>Server Name</label>
-<input 
+<!-- <input 
     type="text" 
     class="form-group" 
-    (input)="onUpdateServerName($event)" />
+    (input)="onUpdateServerName($event)" /> -->
 <input 
     type="text" 
     class="form-group" 
@@ -19,3 +19,21 @@
 <!-- <p>{{allowNewServer}}</p>
 <p [innerText]="allowNewServer"></p> -->
 <p>{{serverCreationStatus}}</p>
+<app-server *ngFor="let server of servers"></app-server>
+
+<hr>
+
+<button
+    class="btn btn-danger"
+    (click)="onButtonClick()">
+    Display Details
+</button>
+<p [ngStyle]="{display:isDisplayed}">Secret pass= tuna</p>
+<h6>Click List</h6>
+<p
+    *ngFor="let click of clicks"
+    [ngStyle]="{backgroundColor: getBackgroundColor(click)}"
+    [ngClass]="{whiteColor: click>=5}">
+    Status is {{click}}
+</p>
+
