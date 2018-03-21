@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector:'app-client',
-    templateUrl: './client.component.html'
+    template: `<p>This is client component!</p>`
 })
 export class ClientComponent{
 
